@@ -1,0 +1,63 @@
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    max-width: 3000px;
+    max-height: 3000px;
+    background-image: url(./images/background-image.jpg);
+}
+menu {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+h1 {
+    margin: auto;
+    width: 560px;
+    height: 340px;
+    background-image: url(./images/Pokémon_GO_logo.svg.png);
+}
+h1:hover {
+    transform: rotate(30deg);
+    -webkit-transform: rotate(-30deg);
+}
+input {
+    margin-top: 2%;
+    margin-left: 47%;
+    margin-bottom: 2%;
+}
+#pokedex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+li {
+    margin-top: 10px;
+    width: 150px;
+    height: 220px;
+    background-image: url(./images/beautiful-gifs-of-space-and-the-universe-100-animated-images.gif);
+    padding: 30px;
+    list-style: none;
+    text-align: center;
+    border: 3px black solid;
+    border-radius: 35%;
+}
+li:hover {
+    box-shadow: 0px 0px 15px 15px #f0e00a;
+    font-weight: bold;
+}
+
+img:hover {
+    cursor: pointer;
+    -webkit-transform: scale(3.3);
+    transform: scale(3.3);
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+}
