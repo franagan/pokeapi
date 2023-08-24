@@ -52,14 +52,28 @@ const draw = (characters) => {
             alert(`has seleccionado a ${character.name}`);
             battle.push(character.name);
             console.log(battle);
+            battlePokemon(mapedCharacters, battle);
             li$$.innerHTML = ``;
         });
     }
 };
 
-// const battlePokemon = ()=><{
-
-// };
+const battlePokemon = (characters, battle) => {
+    ul$$.innerHTML = '';
+    for (const battlePokemonName of battle) {
+        const battlePokemon = characters.find(
+            (character) => character.name === battlePokemonName
+        );
+        const li$$ = document.createElement('li');
+        ul$$.appendChild(li$$);
+        li$$.innerHTML += `
+<p>Orden: ${battlePokemon.id}</p>
+<P>Tipo: ${battlePokemon.type}</P>
+<h2>Nombre: ${battlePokemon.name} </h2>
+<img src='${battlePokemon.image}' alt='${battlePokemon.name}'>
+`;
+    }
+};
 
 const takeInput = (characters) => {
     // console.log(characters);

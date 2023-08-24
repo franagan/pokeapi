@@ -1,66 +1,67 @@
-body{
-    color: white;  
+body {
+    color: white;
     margin: 0;
-    padding: 0;  
+    padding: 0;
     max-width: 3000px;
     max-height: 3000px;
     background-image: url(../images/background-image.jpg);
 }
-menu{
+menu {
     display: flex;
     justify-content: space-around;
     cursor: pointer;
     font-size: x-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-    }
-    a{
-        color: white;
-        text-decoration: none;
-    }
-h1{
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
     margin: auto;
     width: 1250px;
     height: 650px;
     background-image: url(../images/arena\ batalla.jpg);
 }
-h1:hover{
-    
+.inst {
+    text-align: center;
 }
-input{
+h1:hover {
+}
+input {
     margin-top: 2%;
     margin-left: 47%;
     margin-bottom: 2%;
 }
 
-#pokedex{
-display: flex;
-justify-content:space-around;
-flex-wrap: wrap;
+#pokedex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-li{
-margin-top: 10px;
-width: 150px;
-height: 220px;
-background-image: url(../images/remolino\ verde.gif);
-padding: 30px;
-list-style: none;
-text-align: center;
-border: 3px black solid;
-border-radius: 35%;
-
+li {
+    margin-top: 10px;
+    width: 150px;
+    height: 220px;
+    background-image: url(../images/remolino\ verde.gif);
+    padding: 30px;
+    list-style: none;
+    text-align: center;
+    border: 3px black solid;
+    border-radius: 35%;
 }
-li:hover{
+li:hover {
     box-shadow: 0px 0px 15px 15px #f0e00a;
     font-weight: bold;
 }
 
-img:hover{
+img:hover {
     cursor: pointer;
-    -webkit-transform:scale(3.3);transform:scale(3.3);
+    -webkit-transform: scale(3.3);
+    transform: scale(3.3);
     transition: 1s;
-   position: relative;
-   overflow: hidden;
- 
+    position: relative;
+    overflow: hidden;
 }

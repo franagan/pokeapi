@@ -19,16 +19,20 @@ const takeInput = (info) => {
     });
 };
 const draw = () => {
+    let taskId = 0;
     button$$.addEventListener('click', () => {
         // input$$.value = '';
         const li$$ = document.createElement('li');
         ul$$.appendChild(li$$);
-        li$$.innerHTML = `<strong>Nueva tarea  </strong>:  ${form$$.name.value} <button onclick="" id='btn-delete'> X </button>`;
-        const deleteButton = document.getElementById('btn-delete');
+        const taskIdString = `btn-delete-${taskId}`;
+        li$$.innerHTML = `<strong>Nueva tarea</strong>:  ${form$$.name.value} <button id='${taskIdString}'> X </button>`;
+
+        const deleteButton = document.getElementById(taskIdString);
         deleteButton.addEventListener('click', (event) => {
             console.log(event);
-            li$$.innerHTML = '';
+            li$$.remove();
         });
+        taskId++;
     });
 };
 
