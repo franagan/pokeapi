@@ -7,6 +7,7 @@ const getPokemon = async () => {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
         const res = await response.json();
         charRes.push(res);
+        console.log(res);
     }
 
     return charRes;
@@ -16,9 +17,11 @@ const mapCharacters = (characters) => {
     // console.log(characters);
     return characters.map((character) => ({
         name: character.name,
-        image: character.sprites['front_default'],
+        image: character.sprites['front_shiny'],
         type: character.types.map((type) => type.type.name).join(', '),
         id: character.id,
+        abilities: character.abilities[0].ability.name,
+        experience: character.base_experience,
     }));
 };
 
@@ -29,10 +32,19 @@ const draw = (characters) => {
         const li$$ = document.createElement('li');
         ul$$.appendChild(li$$);
         li$$.innerHTML += `
-<p>Orden: ${character.id}</p>
-<P>Tipo: ${character.type}</P>
-<h2>Nombre: ${character.name} </h2>
-<img src='${character.image}' alt='${character.name}'>
+        <div class="card">
+        <div class="face front">
+        <h2>${character.name} </h2>
+        <img src='${character.image}' alt='${character.name}'>
+        </div>
+        <div class="face back">
+            <p>Orden: ${character.id}</p>
+            <h2>Nombre: ${character.name} </h2>
+            <p>Tipo: ${character.type}</p>
+            <p>Hability:${character.abilities}</p>
+            <p>Experience:${character.experience}</p>
+            </div>
+</div>
 `;
     }
 };
